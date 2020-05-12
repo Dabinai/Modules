@@ -1,0 +1,19 @@
+ext {
+
+    isZhihuApplication = false  //知乎模块开关，false:作为Lib组件存在， true:作为application存在
+
+
+    android = [
+            compileSdkVersion :29,
+            buildToolsVersion :"29.0.2",
+            minSdkVersion   : 16,
+            targetSdkVersion: 29,
+            versionCode :1,
+            versionName :"1.0",
+    ]
+
+    version = [
+
+    ]
+
+}
