@@ -50,10 +50,18 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api project(':library-base')
+    api project(':library-network')
+    api project(':library-servicemanager')
 
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    api 'com.scwang.smart:refresh-layout-kernel:2.0.0-alpha-1'
+    api 'com.scwang.smart:refresh-header-classics:2.0.0-alpha-1'
+    api 'com.scwang.smart:refresh-footer-classics:2.0.0-alpha-1'
+    api rootProject.ext.dependencies["arouter-api"]
+    api 'com.orhanobut:logger:2.2.0'
+    api 'org.jetbrains:annotations:15.0'
+    api 'com.blankj:utilcodex:1.26.0'
+    //banner
+    api 'com.github.zhpanvip:BannerViewPager:2.6.6'
+    api 'com.github.zhpanvip:viewpagerindicator:1.0.0'
 }

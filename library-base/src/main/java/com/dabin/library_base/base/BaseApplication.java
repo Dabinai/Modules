@@ -11,9 +11,9 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
-public class BaseAppLication extends Application {
+public class BaseApplication extends Application {
 
-    private static BaseAppLication sInstance;
+    private static BaseApplication sInstance;
     private static boolean sDebug;
 
 
@@ -23,7 +23,7 @@ public class BaseAppLication extends Application {
         setApplication(this);
     }
 
-    private void setApplication(@NonNull BaseAppLication application) {
+    private void setApplication(@NonNull BaseApplication application) {
         sInstance = application;
         application.registerActivityLifecycleCallbacks(new ActivityLifecycleCallbacks() {
             @Override
@@ -66,7 +66,7 @@ public class BaseAppLication extends Application {
     /**
      * 获得当前app运行的Application
      */
-    public static BaseAppLication getInstance() {
+    public static BaseApplication getInstance() {
         if (sInstance == null) {
             throw new NullPointerException(
                     "please inherit BaseApplication or call setApplication.");

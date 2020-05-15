@@ -89,6 +89,11 @@ dependencies {
     annotationProcessor rootProject.ext.dependencies["glide-compiler"]
 
 
+    if (!rootProject.ext.isMainModule) {
+        //主业务模块
+        implementation project(':module-main')
+    }
+
 
 
 }
