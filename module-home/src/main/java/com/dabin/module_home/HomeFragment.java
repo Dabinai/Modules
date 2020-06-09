@@ -4,11 +4,12 @@ import com.alibaba.android.arouter.facade.annotation.Route;
 import com.dabin.library_base.fragment.MvvmLazyFragment;
 import com.dabin.library_base.viewmodel.IMvvmBaseViewModel;
 import com.dabin.library_common.router.RouterFragmentPath;
+import com.dabin.module_home.adapter.HomeFragmentPagegerAdapter;
 import com.dabin.module_home.databinding.HomeFragmentHomeBinding;
 
 @Route(path = RouterFragmentPath.Home.PAGER_HOME)
 public class HomeFragment extends MvvmLazyFragment<HomeFragmentHomeBinding, IMvvmBaseViewModel> {
-
+    private HomeFragmentPagegerAdapter pageAdapter;
     @Override
     protected void onFragmentFirstVisible() {
         super.onFragmentFirstVisible();
